@@ -12,12 +12,17 @@ java {
 }
 
 repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
     mavenCentral()
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.3.2'
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
 }
 
 tasks.named('test') {
